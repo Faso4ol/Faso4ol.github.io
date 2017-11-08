@@ -35,10 +35,6 @@
     cursor: pointer;
 }
 
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
-}
-
 .dropdown {
     position: relative;
     display: inline-block;
@@ -47,9 +43,9 @@
 .dropdown-content {
     display: none;
     position: absolute;
+    right: 0;
     background-color: #f9f9f9;
     min-width: 160px;
-    overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -61,22 +57,33 @@
     display: block;
 }
 
-.dropdown a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: #f1f1f1}
 
-.show {display:block;}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
 </style>
 </head>
 <body>
 
 
-<div class="dropdown">
-<button onclick="myFunction()" class="dropbtn">Menu</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="Faso4ol.github.io/Assignment 4.html" target="_blank">Home Page</a>
-    <a href="https://faso4ol.github.io/Fruits.html">Fruits</a>
+<div class="dropdown" style="float:left;">
+  <button class="dropbtn">Home</button>
+  <div class="dropdown-content" style="left:0;">
+    <a href="Faso4ol.github.io/Assignment 4.html" target="_blank">Home</a>
     <a href="https://faso4ol.github.io/Contact%20us.html">Contact Us</a>
-    <a href="https://faso4ol.github.io/Juices.html">Juices</a>
+  </div>
+</div>
 
+<div class="dropdown" style="float:left;">
+  <button class="dropbtn">Product</button>
+  <div class="dropdown-content">
+    <a href="https://faso4ol.github.io/Fruits.html">Fruits</a>
+    <a href="https://faso4ol.github.io/Juices.html">Juices</a>
   </div>
 </div>
 
@@ -105,7 +112,6 @@ window.onclick = function(event) {
 
 </body>
 </html>
-
 
 
 
