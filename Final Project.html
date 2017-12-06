@@ -12,14 +12,88 @@
 	<center> <h1>Car Racing</h1> </center>
 <center>	
 <picture>
-  
-<source media="(min-width: 200px)" srcset="Images/Redlight.png">
-  <source media="(min-width: 100px)" srcset="Images/Redlight.png">
-  <img src="Images/Redlight.png" alt="Flowers" style="width:auto;">
 
-  
-</picture>
+
+<img id="myImage" onclick="changeImage()" src="Images/Redlight.png" width="100" height="180">
+
+<p>Click the signal</p>
+
+<script>
+function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("bulbon")) {
+        image.src = "Images/Redlight.png";
+    } else {
+        image.src = "Images/Greenlight.png";
+    }
+}
+</script>
+
+<br>
+
+</body>
+
+</picture>
+
+
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("button").click(function(){
+        $("div").animate({left: '1250px'});
+    });
+});
+</script> 
+</head>
+<body>
+
+<button>Start The Race</button>
+
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $("button").click(function(){
+        $("div").animate({left: '1250px'});
+    });
+});
+</script> 
+</head>
+<body>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div style="background:#ff0000;height:100px;width:100px;position:absolute;"></div>
+<br/>
+</body>
+</html>
+
 </center>
+
+
+
+</script>
+
+
 
 
 
